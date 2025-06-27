@@ -19,7 +19,6 @@ const exceptions = {
   'preventdefault': 'PreventDefault',
   'constructor': 'Constructor'
 };
-
 const titleCased = () => {
   return tutorials.map(tutorial => {
     return tutorial
@@ -35,6 +34,7 @@ const titleCased = () => {
         if (exceptions[lowerWord]) {
           return exceptions[lowerWord] + punctuation;
         }
+
         return coreWord.charAt(0).toUpperCase() + coreWord.slice(1).toLowerCase() + punctuation;
       })
       .join(' ');
