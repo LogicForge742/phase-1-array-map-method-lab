@@ -35,7 +35,6 @@ const titleCased = () => {
         if (exceptions[lowerWord]) {
           return exceptions[lowerWord] + punctuation;
         }
-
         return coreWord.charAt(0).toUpperCase() + coreWord.slice(1).toLowerCase() + punctuation;
       })
       .join(' ');
